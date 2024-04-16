@@ -9,12 +9,12 @@ Ein Operationsverstärker ist ein Differenzenverstärker, d.h., die Ausgangsspan
 \begin{equation*}
     U_\text{A} = V \cdot \left( U_\text{P} - U_\text{N}\right)\, .
 \end{equation*}
-Die Ausgangsspannung ist phasengleich mit $U_\text{P}$, die am nicht-invertierenden Eingang ($+$) anliegt, und gegenphasig zu $U_\text{N}$, die am invertierenden Eingang ($-$) anliegt. Dies ist in \autoref{fig:schaltung} dargestellt. Das dreieckige Symbol ist veraltet, das aktuelle Symbol ist ein Rechteck.
+Die Ausgangsspannung ist phasengleich mit $U_\text{P}$, die am nicht-invertierenden Eingang ($+$) anliegt, und gegenphasig zu $U_\text{N}$, die am invertierenden Eingang ($-$) anliegt. Das Schaltbild eines Operativverstärkers ist in \autoref{fig:schaltung} dargestellt.
 
 \begin{figure}%
     \centering%
-    %\includegraphics[width=0.8\textwidth]{images/schaltbild_buch.png}%
-    \caption{Schaltbild eines Operationsverstärkers. Die Betriebsspannung $U_\text{B}$ wird üblicherweise nicht dargestellt. \cite{BrabetzHaasSpieker+2015}}%
+    \includegraphics[width=0.8\textwidth]{Bilder/OpAmp.png}%
+    \caption{Schaltbild eines Operationsverstärkers.\cite{OpAmp1}}%
     \label{fig:schaltung}%
 \end{figure}%
 
@@ -26,7 +26,8 @@ außerhalb dieses Bereichs ist die Ausgangsspannung $\pm U_\text{S}$. Dies ist i
 
 \begin{figure}%
     \centering%
-    %\includegraphics[width=0.4\textwidth]{images/kennlinie_buch.png}%
+    
+    \includegraphics[width=0.4\textwidth]{Bilder/kennlinie_buch.png}%
     \caption{Kennlinie eines idealen und eines realen Operationsverstärkers. \cite{BrabetzHaasSpieker+2015}}%
     \label{fig:kennlinie}%
 \end{figure}%
@@ -85,12 +86,12 @@ In diesem Abschnitt werden die im Versuch verwendeten Schaltungen vorgestellt.
 \noindent 
 Da die Ausgangsspannung bei einem normalen realen Operationsverstärker schnell in den gesättigten Bereich übergeht, kann stattdessen ein invertierender Linearverstärker verwendet werden. Dazu wird die Ausgangsspannung über einen Widerstand $R_2$ an den invertierenden Eingang des Operationsverstärkers gegeben, wie in \autoref{fig:invertierter_lin} dargestellt. Dieses Verfahren wird auch als Gegenkopplung bezeichnet. Bei einer Zunahme der Ausgangsspannung kommt es zu einer Abnahme der Eingangsspannung. 
 
-\begin{figure}[H]%
-    \centering%
+%\begin{figure}[H]%
+%    \centering%
     %\includegraphics[width=0.4\textwidth]{images/invertierter_lin.png}%
-    \caption{Schaltbild eines gegengekoppelten invertierenden Linearverstärkers. \cite{V51}}%
-    \label{fig:invertierter_lin}%
-\end{figure}%
+%    \caption{Schaltbild eines gegengekoppelten invertierenden Linearverstärkers. \cite{V51}}%
+%    \label{fig:invertierter_lin}%
+%\end{figure}%
 
 \noindent
 Nach der Proportionalität der Ausgangsspannung zur Differenz der Eingangsspannungen gilt hier 
@@ -126,12 +127,12 @@ wird der Ausgangswiderstand verkleinert. Außerdem wird die Bandbreite um g erh�
 \noindent
 Ein Umkehrintegrator lässt sich wie in \autoref{fig:umkehrint} aufbauen. Im Unterschied zum invertierenden Linearverstärker ist hier ein Kondensator in der Rückkopplungsschleife eingebaut.
 
-\begin{figure}[H]
-    \centering
+%\begin{figure}[H]
+%    \centering
     %\includegraphics[width=0.4\textwidth]{images/Umkehrintegrator.png}
-    \caption{Schaltbild eines Umkehrintegrators. \cite{V51}}
-    \label{fig:umkehrint}
-\end{figure}
+%    \caption{Schaltbild eines Umkehrintegrators. \cite{V51}}
+%    \label{fig:umkehrint}
+%\end{figure}
 
 \noindent
 Gemäß der Knotenregel ergibt sich für den Knotenpunkt vor dem invertierenden Eingang 
@@ -158,12 +159,12 @@ berechnet. Die Ausgangsspannung ergibt sich also aus dem Integral der Eingangssp
 \noindent
 Ein invertierender Differenzierer ist in \autoref{fig:inverdiff} dargestellt. Es ist zu erkennen, dass sich zum Umkehrintegrator nur die Platzierung des Widerstandes und des Kondensators vertauscht hat.
 
-\begin{figure}[H]
-    \centering
+%\begin{figure}[H]
+%    \centering
     %\includegraphics[width=0.4\textwidth]{images/invertierter_diff.png}
-    \caption{Schaltbild eines invertierenden Differenzierers. \cite{V51}}
-    \label{fig:inverdiff}
-\end{figure}
+%    \caption{Schaltbild eines invertierenden Differenzierers. \cite{V51}}
+%    \label{fig:inverdiff}
+%\end{figure}
 
 \noindent
 Die Knotenregel für den Knotenpunkt vor dem invertierenden Eingang ergibt hier 
@@ -191,21 +192,21 @@ die eine lineare Proportionalität zur Frequenz aufweist.
 \noindent 
 Bei dieser Schaltung wird die Ausgangsspannung über einen Widerstand an den nichtinvertierenden Eingang des Operationsverstärkers gegeben. Dies ist in \autoref{fig:schmitttrig} dargestellt.
 
-\begin{figure}[H]
-    \centering
+%\begin{figure}[H]
+%    \centering
     %\includegraphics[width=0.4\textwidth]{images/schmitt_trigger.png}
-    \caption{Schaltbild einer Schmitt-Triggerschaltung. \cite{V51}}
-    \label{fig:schmitttrig}
-\end{figure}
+%    \caption{Schaltbild einer Schmitt-Triggerschaltung. \cite{V51}}
+%    \label{fig:schmitttrig}
+%\end{figure}
 \noindent
-Es kommt somit zu einer Mitkopplung, bei der ein größeres Ausgangssignal ein größeres Eingangssignal erzeugt. Dies führt zu einem recht instabilen Verhalten, und die Ausgangsspannung springt abrupt auf $\pm U_\text{S}$, sobald die Eingangsspannung bestimmte Schwellenwerte erreicht. Dies ist in \autoref{fig:abbschmitt} dargestellt. Das Ausgangssignal ist also eine Rechteckspannung.
+Es kommt somit zu einer Mitkopplung, bei der ein größeres Ausgangssignal ein größeres Eingangssignal erzeugt. Dies führt zu einem recht instabilen Verhalten, und die Ausgangsspannung springt abrupt auf $\pm U_\text{S}$, sobald die Eingangsspannung bestimmte Schwellenwerte erreicht.% Dies ist in \autoref{fig:abbschmitt} dargestellt. Das Ausgangssignal ist also eine Rechteckspannung.
 
-\begin{figure}[H]
-    \centering
+%\begin{figure}[H]
+%    \centering
     %\includegraphics[width=0.4\textwidth]{images/schmitt_trig_dia.png}
-    \caption{Ein $U_E$-$U_\text{A}$ Diagramm des Schmitt-Triggers. \cite{Joachim}}
-    \label{fig:abbschmitt}
-\end{figure}
+%    \caption{Ein $U_E$-$U_\text{A}$ Diagramm des Schmitt-Triggers. \cite{Joachim}}
+%    \label{fig:abbschmitt}
+%\end{figure}
 
 Die Schwellwerte der Eingangsspannung sind 
 \begin{align*}
@@ -217,12 +218,12 @@ Die Schwellwerte der Eingangsspannung sind
 \noindent 
 Wenn ein Schmitt-Trigger an einen Umkehrintegrator angeschlossen wird, wie in \autoref{fig:signal} dargestellt, beginnt das System spontan zu schwingen. 
 
-\begin{figure}[H]
-    \centering
+%\begin{figure}[H]
+%    \centering
     %\includegraphics[width=0.8\textwidth]{images/signalgenerator.png}
-    \caption{Schaltbild eines Signalgenerators. \cite{V51}}
-    \label{fig:signal}
-\end{figure}
+%    \caption{Schaltbild eines Signalgenerators. \cite{V51}}
+%    \label{fig:signal}
+%\end{figure}
 
 \noindent
 Die konstante Spannung, die vom Schmitt-Trigger ausgeht, wird integriert. Die Ausgangsspannung aus dem Umkehrintegrator wird als $U_1$ verwendet, sodass die Eingangsspannung des Schmitt-Triggers einen Schwellenwert erreicht. In den Integrator wird eine konstante Spannung mit entgegengesetztem Vorzeichen eingespeist. Insgesamt ergibt sich als Ausgangsspannung eine Dreiecksspannung mit 
