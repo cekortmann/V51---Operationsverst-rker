@@ -96,3 +96,74 @@ Für das Verhältnisse ergeben sich folgende experimentell bestimmte Werte.
     \end{tabular}
     \label{tab:InvAmp3}
 \end{table}
+
+\newpage
+
+\subsection{Integrator}
+\begin{table}
+    \centering
+    \caption{Messwerte des Integrators mit $R=10\,\unit{\kilo\ohm}$ und $C=100\,\unit{\nano\farad}$}
+    \begin{tabular}{c c c}
+        \toprule
+        Frequenz $f\mathbin{/}\unit{\hertz}$ & Eingangsspannung $U_{\text{E}}\mathbin{/}\unit{\volt}$& Ausgangsspannung $U_{\text{A}}\mathbin{/}\unit{\volt}$ \\
+        \midrule
+        7& 3.02 & 28.6 \\
+        15 & 3.02 & 26.1 \\
+        20 & 3.02 & 20.6 \\
+        30 & 3.02 & 15.0 \\
+        45 & 3.02 & 10.8 \\
+        60 & 3.02 & 8.5 \\
+        90 & 3.02 & 6.2 \\
+        120 & 3.02 & 4.7 \\
+        180 & 3.02 & 3.5 \\
+        240 & 3.02 & 2.8 \\
+        350 & 3.02 & 2.3 \\
+        480 & 3.02 & 1.7 \\
+        700 & 3.02 & 1.5 \\
+        960 & 3.02 & 1.4 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:Integrator}
+\end{table}
+
+um: -0.703+/-0.024 ub: 3.89+/-0.12
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{build/integrator.pdf}
+    \caption{Verstärkung $U_A/U_E$ eines Integrators in Abhängigkeit von der Frequenz.}
+    \label{fig:intplot}
+\end{figure}
+
+\subsection{Differentiator}
+\begin{table}
+    \centering
+    \caption{Messwerte des Differentiators mit $R=100\,\unit{\kilo\ohm}$ und $C=22\,\unit{\nano\farad}$}
+    \begin{tabular}{c c c}
+        \toprule
+        Frequenz $f\mathbin{/}\unit{\hertz}$ & Eingangsspannung $U_{\text{E}}\mathbin{/}\unit{\volt}$& Ausgangsspannung $U_{\text{A}}\mathbin{/}\unit{\volt}$ \\
+        \midrule
+        7& 6.15 & 1.1 \\
+        15 & 5.99 & 1.6 \\
+        20 & 5.99 & 2.1 \\
+        30 & 5.99 & 2.9 \\
+        45 & 6.15 & 3.9 \\
+        60 & 5.99 & 5.3 \\
+        90 & 5.99 & 7.8 \\
+        120 & 5.99 & 11.5 \\
+        180 & 5.99 & 14.3 \\
+        240 & 5.99 & 19.1 \\
+        350 & 5.99 & 27.1 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:Differentiator}
+\end{table}
+
+um: 0.869+/-0.023 ub: -3.63+/-0.10
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{build/differentiator.pdf}
+    \caption{Verstärkung $U_A/U_E$ eines Differentiators in Abhängigkeit von der Frequenz.}
+    \label{fig:diffplot}
+\end{figure}
