@@ -100,6 +100,7 @@ Für das Verhältnisse ergeben sich folgende experimentell bestimmte Werte.
 \newpage
 
 \subsection{Integrator}
+Die Messwerte der Eingangs- und Ausgangsspannung in Abhängigkeit der Frequenz befinden sich in \autoref{tab:Integrator}. 
 \begin{table}
     \centering
     \caption{Messwerte des Integrators mit $R=10\,\unit{\kilo\ohm}$ und $C=100\,\unit{\nano\farad}$}
@@ -125,17 +126,37 @@ Für das Verhältnisse ergeben sich folgende experimentell bestimmte Werte.
     \end{tabular}
     \label{tab:Integrator}
 \end{table}
-
-um: -0.738+/-0.021 ub: 4.07+/-0.10
-
+Aus diesen lässt sich mittels \autoref{eqn:verstaerkung} die Verstärkung des Signals berechnen. Diese wird in \autoref{fig:intplot} erneut
+in Abhängigkeit der Frequenz dargestellt. Dabei sind beide Achsen logarithmisch. In diesem Fall lässt sich eine Ausgleichsgerade:
+\begin{equation}
+    ln(v) = m \cdot ln(f) + n
+    \label{eqn:ausgleichger}
+\end{equation} 
+bestimmen, wobei der erste Wert nicht ganz auf der Geraden liegt und deshalb ausgenommen wird. 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{build/integrator.pdf}
     \caption{Verstärkung $U_A/U_E$ eines Integrators in Abhängigkeit von der Frequenz.}
     \label{fig:intplot}
 \end{figure}
+Experimentell ergeben sich für die Parameter: 
+\begin{align*}
+    m &= -0.738 \pm 0.021 \\
+    n &= 4.07 \pm 0.10 \\
+\end{align*}
+Wenn \autoref{eqn:ausgleichger} nun zu 
+\begin{equation*}
+    V = f^m exp(n)
+\end{equation*}
+umgestellt und mit \autoref{eqn:int} verglichen wird, ergeben sich folgende Theoriewerte:
+\begin{align*}
+    m &= -1 \\
+    n &= ln(\frac{1}{RC}) = 6.91
+\end{align*}
+
 
 \subsection{Differentiator}
+Die Messwerte der Eingangs- und Ausgangsspannung in Abhängigkeit der Frequenz für den Differentiator befinden sich in \autoref{tab:Differentiator}.
 \begin{table}
     \centering
     \caption{Messwerte des Differentiators mit $R=100\,\unit{\kilo\ohm}$ und $C=22\,\unit{\nano\farad}$}
@@ -158,8 +179,12 @@ um: -0.738+/-0.021 ub: 4.07+/-0.10
     \end{tabular}
     \label{tab:Differentiator}
 \end{table}
-
-um: 0.869+/-0.023 ub: -3.63+/-0.10
+Auch diesmal wird die Verstärkung $V=U_A/U_B$ in Abhängigkeit von der Frequenz doppellogarithmisch geplottet. Die Ausgleichsgerade 
+ergibt sich erneut über \autoref{eqn:ausgleichger}. Für diese berechnen sich die Parameter:
+\begin{align*}
+    m&= 0.869 \pm 0.023\\
+    n &=-3.63 \pm 0.10 \\
+\end{align*}
 
 \begin{figure}
     \centering
@@ -167,19 +192,27 @@ um: 0.869+/-0.023 ub: -3.63+/-0.10
     \caption{Verstärkung $U_A/U_E$ eines Differentiators in Abhängigkeit von der Frequenz.}
     \label{fig:diffplot}
 \end{figure}
-
+Erneut wird \autoref{eqn:ausgleichger} mit \autoref{eqn:dif} verglichen. Dabei ergeben sich die folgenden Theoriewerte:
+\begin{align*}
+    m &= 1 \\
+    n &= ln(RC) = -6.12
+\end{align*}
 
 \subsection{Generator mit variierender Amplitude}
+Beim Anlegen einer Rechtecksspannung, entsteht eine gedämpfte Oszillation. Dies konnte im Versuch mit dem Oszilloskop aufgezeichnet werden und 
+wird  in \autoref{fig:genvarosz} abgebildet. Dabei beschreibt die gelbe Linie die Rechteckspannung als Eingangssignal und die grüne Linie 
+die gedämpfte Oszillation als Ausgangssignal.
 \begin{figure}
     \centering
     \includegraphics[width=0.7\textwidth]{genvarplot.png}
     \caption{Verlauf der gedämpften Oszillation.}
     \label{fig:genvarosz}
 \end{figure}
-
+Nun konnten mithilfe des Oszilloskops die Messdaten extrahiert werden. Bei genauerer Analayse konnten so die Maxima der Ausgangsspannung 
+ausfindig gemacht werden. Diese sind in Abhängigkeit von der Zeit in \autoref{fig:genvarAmp} dargestellt.
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{build/genvar.pdf}
     \caption{Verlauf der Amplituden der gedämpften Oszillation}
-    \label{fig:genvarAmo}
+    \label{fig:genvarAmp}
 \end{figure}

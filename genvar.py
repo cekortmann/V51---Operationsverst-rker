@@ -23,17 +23,17 @@ t, U = np.genfromtxt('genvarAmp.txt', unpack=True, skip_header=1)
 
 # Ausgleichsrechung nach Gaußverteilung
 
-def g(U0,n, x):
-    return U0*np.exp(n*x/(20*10000*22))  # b = 2*sigma**2
+def g(U0,T, x):
+    return U0*np.exp(x*10**(-9)/T)  # b = 2*sigma**2
 
 para, pcov = curve_fit(g,t,U)
-U0, n = para
+U0, T = para
 pcov = np.sqrt(np.diag(pcov))
-fU, fn = pcov
+fU, fT = pcov
 uU = ufloat(U0, fU) 
-un = ufloat(n, fn)
+uT = ufloat(T, fT)
 
-print('uU:',uU,'un:',un)
+print('uU:',uU,'un:',uT)
 
 xx = np.linspace(0, 800, 10**4)
 
