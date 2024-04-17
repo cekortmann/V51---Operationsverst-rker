@@ -44,9 +44,10 @@ Die Unterschiede zwischen einem realen und einem idealen Operationsverstärker f
 Wenn an beiden Eingängen die gleiche Spannung $U_\text{Gl}$ anliegt, sollte bei einem idealen Operationsverstärker eine Ausgangsspannung $U_\text{A} = \SI{0}{\volt}$ auftreten. Bei einem realen Verstärker misst man jedoch eine Ausgangsspannung $\increment U_\text{A}$.
 
 Dieses Phänomen wird als Gleichtaktverstärkung bezeichnet und durch die Formel
-\begin{equation*}
+\begin{equation}
     V_\text{Gl} = \frac{\increment U_\text{A}}{U_\text{Gl}}\, .
-\end{equation*}
+    \label{eqn:verstaerkung}
+\end{equation}
 parametrisiert. Zudem ist eine Offsetspannung zu messen, da eine Ausgangsspannung zu messen ist, falls beide Eingangsspannungen $0$ betragen. Die Offsetspannung $U_0$ ist als 
 \begin{equation*}
     U_0 = U_\text{P} - U_\text{N}
@@ -231,3 +232,24 @@ Die konstante Spannung, die vom Schmitt-Trigger ausgeht, wird integriert. Die Au
     \text{Frequenz}\, : & & \text{und} & & \text{Amplitude}\, :& \\
     \nu_\text{Dreieck} &= \frac{R_2}{4 C R_1 R_3} & & &A &=  U_\text{max} \frac{R_1}{R_2} \, .
 \end{align*}
+
+\subsubsection{Generator mit variierender Amplitude}
+Ein Generator mit variierender Amplitude besteht aus zwei Integratoren und einem Invertierer. Dadurch kann eine gedämpfte Oszillation hergestellt 
+werden. Der Aufbau ist in \autoref{fig:generatorvar} dargestellt.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{generatorvar.png}
+    \caption{Schaltbild eines Generators mit variierenden Amplituden \cite{ap51}.}
+    \label{fig:generatorvar}
+\end{figure}
+Die gedämpfte Oszillation lässt sich über die Differentialgleichung
+\begin{equation*}
+    \frac{\symup{d^2}U_A}{\symup{d}t^2}- \frac{\eta}{10RC}\frac{\symup{d}U_A}{\symup{d}t}+\frac{1}{R^2C^2}U_A = 0
+\end{equation*}
+beschreiben. Dabei ist $\eta$ die Dämpfungskonstante. 
+Obige Gleichung ist lösbar mit 
+\begin{equation}
+    U_A(t) = U_0\cdot exp\lvert \frac{t}{\tau}\rvert \cdot sin \lvert 2\pi\frac{t}{T}\rvert \,\,\text{.}
+    \label{eqn:dgllsg}
+\end{equation}
+Hierbei ist $\tau = \frac{20RC}{\eta}$ die Abklingdauer und $T=2\pi RC$ die Schwingungsdauer.
