@@ -3,6 +3,7 @@ import matplotlib as mpl
 import numpy as np
 from numpy import sqrt
 import pandas as pd
+import math
 import scipy.constants as const
 from scipy.optimize import curve_fit                        # Funktionsfit:     popt, pcov = curve_fit(func, xdata, ydata) 
 from uncertainties import ufloat                            # Fehler:           fehlerwert =  ulfaot(x, err)
@@ -13,7 +14,7 @@ from uncertainties.unumpy import (nominal_values as noms,   # Wert:             
 
 # Plot 1:
 
-f, Ue, Ua = np.genfromtxt('differentiator.txt', unpack=True, skip_header=1) 
+t, U = np.genfromtxt('genvarAmp.txt', unpack=True, skip_header=1) 
 
 # für den initial guess bei curvefit()
 #n = len(f)                             # Anzahl der Daten
@@ -22,26 +23,26 @@ f, Ue, Ua = np.genfromtxt('differentiator.txt', unpack=True, skip_header=1)
 
 # Ausgleichsrechung nach Gaußverteilung
 
-def g(m,x,b):
-    return m*x+b  # b = 2*sigma**2
+def g(U0,n, x):
+    return U0*np.exp(n*x/(20*10000*22))  # b = 2*sigma**2
 
-para, pcov = curve_fit(g, np.log(f),np.log(Ua/Ue))
-m, b = para
+para, pcov = curve_fit(g,t,U)
+U0, n = para
 pcov = np.sqrt(np.diag(pcov))
-fm, fb = pcov
-um = ufloat(m, fm) 
-ub = ufloat(b, fb)
+fU, fn = pcov
+uU = ufloat(U0, fU) 
+un = ufloat(n, fn)
 
-print('um:',um,'ub:',ub)
+print('uU:',uU,'un:',un)
 
-xx = np.linspace(1.5, 6, 10**4)
+xx = np.linspace(0, 800, 10**4)
 
-plt.plot(np.log(f), np.log(Ua/Ue), 'xr', markersize=6 , label = 'Messdaten', alpha=0.5)
-plt.plot(xx, g(xx, *para), '-b', linewidth = 1, label = 'Ausgleichsfunktion', alpha=0.5)
-plt.xlabel(r'$log(f) \, / \, \mathrm{Hz}$')
-plt.ylabel(r'$log(U_A \, / \, U_E)$')
+plt.plot(t, U, 'xr', markersize=6 , label = 'Messdaten', alpha=0.5)
+#plt.plot(xx, g(xx, *para), '-b', linewidth = 1, label = 'Ausgleichsfunktion', alpha=0.5)
+plt.xlabel(r'$t \, / \, \mathrm{ns}$')
+plt.ylabel(r'$U_A \, / \, \mathrm{V}$')
 plt.legend(loc="best")                  # legend position
 plt.grid(True)                          # grid style
 
-plt.savefig('build/differentiator.pdf', bbox_inches = "tight")
+plt.savefig('build/genvar.pdf', bbox_inches = "tight")
 plt.clf() 
