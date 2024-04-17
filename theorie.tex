@@ -85,7 +85,7 @@ In diesem Abschnitt werden die im Versuch verwendeten Schaltungen vorgestellt.
 \subsubsection{Invertierender Linearverstärker}
 
 \noindent 
-Da die Ausgangsspannung bei einem normalen realen Operationsverstärker schnell in den gesättigten Bereich übergeht, kann stattdessen ein invertierender Linearverstärker verwendet werden. Dazu wird die Ausgangsspannung über einen Widerstand $R_2$ an den invertierenden Eingang des Operationsverstärkers gegeben, wie in \autoref{fig:invertierter_lin} dargestellt. Dieses Verfahren wird auch als Gegenkopplung bezeichnet. Bei einer Zunahme der Ausgangsspannung kommt es zu einer Abnahme der Eingangsspannung. 
+Da die Ausgangsspannung bei einem normalen realen Operationsverstärker schnell in den gesättigten Bereich übergeht, kann stattdessen ein invertierender Linearverstärker verwendet werden. Dazu wird die Ausgangsspannung über einen Widerstand $R_2$ an den invertierenden Eingang des Operationsverstärkers gegeben, wie in \autoref{fig:verstaerker} dargestellt. Dieses Verfahren wird auch als Gegenkopplung bezeichnet. Bei einer Zunahme der Ausgangsspannung kommt es zu einer Abnahme der Eingangsspannung. 
 
 %\begin{figure}[H]%
 %    \centering%
@@ -111,22 +111,22 @@ wobei die Näherung $V\gg 1$ genutzt wird. Es ist gut zu sehen, dass die Verstä
 \begin{equation*}
     g \coloneq \frac{V}{V'}
 \end{equation*}
-wird der Ausgangswiderstand verkleinert. Außerdem wird die Bandbreite um g erhöht, wie es in \autoref{fig:frequgang} zu sehen ist.
+wird der Ausgangswiderstand verkleinert. Außerdem wird die Bandbreite um g erhöht.
  
         
 
 
-\begin{figure}[H]
-    \centering
+%\begin{figure}[H]
+ %   \centering
     %\includegraphics[width=0.6\textwidth]{images/frequenzgang_lin.png}
-    \caption{Frequenzgang des Linearverstärkers. \cite{V51_old}}
-    \label{fig:frequgang}
-\end{figure}
+  %  \caption{Frequenzgang des Linearverstärkers. \cite{V51_old}}
+   % \label{fig:frequgang}
+%\end{figure}
 
 \subsubsection{Umkehrintegrator}
 
 \noindent
-Ein Umkehrintegrator lässt sich wie in \autoref{fig:umkehrint} aufbauen. Im Unterschied zum invertierenden Linearverstärker ist hier ein Kondensator in der Rückkopplungsschleife eingebaut.
+Ein Umkehrintegrator lässt sich wie in \autoref{fig:integrator} aufbauen. Im Unterschied zum invertierenden Linearverstärker ist hier ein Kondensator in der Rückkopplungsschleife eingebaut.
 
 %\begin{figure}[H]
 %    \centering
@@ -158,7 +158,7 @@ berechnet. Die Ausgangsspannung ergibt sich also aus dem Integral der Eingangssp
 \subsubsection{Invertierender Differenzierer}
 
 \noindent
-Ein invertierender Differenzierer ist in \autoref{fig:inverdiff} dargestellt. Es ist zu erkennen, dass sich zum Umkehrintegrator nur die Platzierung des Widerstandes und des Kondensators vertauscht hat.
+Ein invertierender Differenzierer ist in \autoref{fig:differenzierer} dargestellt. Es ist zu erkennen, dass sich zum Umkehrintegrator nur die Platzierung des Widerstandes und des Kondensators vertauscht hat.
 
 %\begin{figure}[H]
 %    \centering
@@ -191,7 +191,7 @@ die eine lineare Proportionalität zur Frequenz aufweist.
 \subsubsection{Nichtinvertierender Schmitt-Trigger}
 
 \noindent 
-Bei dieser Schaltung wird die Ausgangsspannung über einen Widerstand an den nichtinvertierenden Eingang des Operationsverstärkers gegeben. Dies ist in \autoref{fig:schmitttrig} dargestellt.
+Bei dieser Schaltung wird die Ausgangsspannung über einen Widerstand an den nichtinvertierenden Eingang des Operationsverstärkers gegeben. Dies ist in \autoref{fig:schmitt} dargestellt.
 
 %\begin{figure}[H]
 %    \centering
@@ -217,7 +217,7 @@ Die Schwellwerte der Eingangsspannung sind
 \subsubsection{Signalgenerator}
 
 \noindent 
-Wenn ein Schmitt-Trigger an einen Umkehrintegrator angeschlossen wird, wie in \autoref{fig:signal} dargestellt, beginnt das System spontan zu schwingen. 
+Wenn ein Schmitt-Trigger an einen Umkehrintegrator angeschlossen wird, beginnt das System spontan zu schwingen. 
 
 %\begin{figure}[H]
 %    \centering

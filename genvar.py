@@ -30,8 +30,9 @@ para, pcov = curve_fit(g,t,U)
 U0, T = para
 pcov = np.sqrt(np.diag(pcov))
 fU, fT = pcov
-uU = ufloat(U0, fU) 
-plt.plot(xx, f(xx, *para), '-b', linewidth = 1, label = 'Ausgleichsfunktion', alpha=0.5)
+uU = ufloat(U0, fU)
+xx= np.linspace(0,800,10*4) 
+plt.plot(xx, g(xx, *para), '-b', linewidth = 1, label = 'Ausgleichsfunktion', alpha=0.5)
 plt.xlabel(r'$t \, / \, \mathrm{ns}$')
 plt.ylabel(r'$U_A \, / \, \mathrm{V}$')
 plt.legend(loc="best")                  # legend position
