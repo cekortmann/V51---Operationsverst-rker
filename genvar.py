@@ -31,7 +31,12 @@ U0, T = para
 pcov = np.sqrt(np.diag(pcov))
 fU, fT = pcov
 uU = ufloat(U0, fU) 
-plt.plot(xx, f(xx, *para), '-b', linewidth = 1, label = 'Ausgleichsfunktion', alpha=0.5)
+uT = ufloat(T, fT)
+
+xx = np.linspace(0, 800, 10**4)
+
+plt.plot(t, U, 'xr', markersize=6 , label = 'Messdaten', alpha=0.5)
+#plt.plot(xx, f(xx, *para), '-b', linewidth = 1, label = 'Ausgleichsfunktion', alpha=0.5)
 plt.xlabel(r'$t \, / \, \mathrm{ns}$')
 plt.ylabel(r'$U_A \, / \, \mathrm{V}$')
 plt.legend(loc="best")                  # legend position

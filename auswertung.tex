@@ -278,6 +278,36 @@ Erneut wird \autoref{eqn:ausgleichger} mit \autoref{eqn:dif} verglichen. Dabei e
     n &= ln(RC) = -6.12
 \end{align*}
 
+\subsection{Schmitt-Trigger}
+Über die erste Methode wurde ein Schwellenwert von $U_+=3.213 \,\unit{\volt}$ gemessen. Beim Anlegen einer Dreieckspannung wurde als Schwellenwert 
+$U_+=2.994\,\unit{\volt}$ gemessen. Wenn aus diesen Werten der Mittelwert gebildet wird, ergibt sich $U_+=3.104\,\unit{\volt}$. Der Theoriewert 
+ergibt sich über \autoref{eqn:schwell}. Dabei ist $U_S$ die Ausgangsspannung am Schwellwert, d.h. die Ausgangsspannung springt abrupt auf 
+$U_S$
+
+\subsection{Signalgenerator}
+In \autoref{fig:genDrei} ist in gelb das sinusförmige Eingangssignal und in grün das dreieckförmige Ausgangssignal dargestellt. 
+Desweiteren lassen sich folgende Werte für die Amplituden und die Frequenz ablesen:
+\begin{align*}
+    Amp_1 &= 3.14 \,\unit{\volt} \\
+    Amp_2 &= 18.7 \,\unit{\volt} \\
+    f_2 &= 100.4 \,\unit{\hertz} \, .\\
+\end{align*}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{genDrei.png}
+    \caption{Ausgangs- und Eingangssignal eines Signalgenerators.}
+    \label{fig:genDrei}
+\end{figure}
+Mittels \autoref{eqn:fdrei} lässt sich die Frequenz theoretisch berechnen. Es ergibt sich
+\begin{equation*}
+    f = 2500 \,\unit{\hertz} \, .
+\end{equation*}
+Auch die Amplitude des Ausgangssignals lässt sich theoretisch berechnen. Es ergibt sich mit \autoref{eqn:amp2}
+\begin{equation*}
+    Amp_2 = 31.4 \,\unit{\volt}
+\end{equation*}
+
 \subsection{Generator mit variierender Amplitude}
 Beim Anlegen einer Rechteckspannung, entsteht eine gedämpfte Oszillation. Dies konnte im Versuch mit dem Oszilloskop aufgezeichnet werden und 
 wird  in \autoref{fig:genvarosz} abgebildet. Dabei beschreibt die gelbe Linie die Rechteckspannung als Eingangssignal und die grüne Linie 

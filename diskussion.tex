@@ -8,7 +8,16 @@ Die zu Beginn konstante Verstärkung bis hin zu einer Grenzfrequenz wird hingege
 bei einer Frequenz, die klein genug ist gestartet werden. Ein einziger Wert zu Beginn weicht von der linearen Verteilung ab und deutet somit ein 
 wenig auf die konstante Verstärkung hin. Beim Differentiator wird in \autoref{fig:diffplot} deutlich, dass die Verstärkung mit zunehmender Frequenz linear 
 abnimmt. Dieses Verhalten bestätigt die theoretische Erwartung.
-
-
+\\
+Leider haben wir beim Schmitt-Trigger vergessen, die Ausgangsspannung $U_S$ zu notieren, sodass eine Berechnung der Theoriewerte und ein Vergleich mit 
+diesen nicht möglich ist. Zudem war bei beiden Methoden jeweils nur ein Schwellwert sichtbar, sodass ein mögliches Mitteln ausblieb. Dadurch wird 
+der Schwellwert ungenauer. Außerdem ergaben sich über die beiden Methoden unterschiedliche Schwellwerte, obwohl die Methode bei der Messung 
+keinen Unterschied machen dürfte.
+\\
+Der Signalgenerator erzeugt eine Dreiecksspannung, wie in \autoref{fig:genDrei} zu sehen ist. Die Dreiecksspannung hatte in unserem Versuch, 
+keine perfekte Form eines Dreiecks. Dies lag a verschiedenen technischen Schwierigkeiten mit dem Oszilloskop. Außerdem zeigen die theoretischen Werte 
+von den gemessenen Werten eine sehr große Abweichung. Bei der Frequenz sind dies circa $2500\%$, bei der Amplitude circa $200\%$. Dies könnte ebenfalls 
+an den Schwierigkeiten mit dem Oszilloskop, aber auch an der undeutlichen Dreieckspannung liegen.
+\\
 Beim Generator mit variierenden Amplituden wird in \autoref{fig:genvarAmp} der exponentiell abfallende Verlauf der gedämpften Oszillation 
 deutlich. Dies ist als Lösung von der Differentialgleichung (\autoref{eqn:dgllsg}) zu erwarten.
