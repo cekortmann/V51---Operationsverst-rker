@@ -3,7 +3,7 @@
 
 \input{fehlerrechnung.tex}
  
-\subsection{Inverting Amplifier}
+\subsection{Invertierender Linearverstärker}
 \label{sec:InvertinAmpl}
  
 Es wurden drei verschiedene Frequenzverhältnisse $\frac{R_2}{R_1}$ verwendet, zu welchen dann jeweils die Ausgangsamplituden in Abhängigkeit der Frequenz notiert wurden.
@@ -17,12 +17,12 @@ Die theoretischen Vergleichswerte für die Leerlaufverstärkung ergeben sich so 
 
 Für die Verhältnisse ergeben sich folgende experimentell bestimmte Werte.
 
-\subsubsection{Inverting Amplifier 1}
-\label{sec:InvertingAmplifier1}
+\subsubsection{Invertierender Linearverstärker 1}
+\label{sec:InvertierenderLinearverstärker1}
 
 \begin{table}
     \centering
-    \caption{Messwerte des Inverting Amplifiers mit $R_1=1\,\unit{\kilo\ohm}$ und $R_2=100\,\unit{\kilo\ohm}$}
+    \caption{Messwerte des Invertierenden Linearverstärkers mit $R_1=1\,\unit{\kilo\ohm}$ und $R_2=100\,\unit{\kilo\ohm}$}
     \begin{tabular}{c c c c}
         \toprule
         Frequenz $f\mathbin{/}\unit{\hertz}$ & Ausgangsampl. $U_0\mathbin{/}\unit{\volt}$& Eingangsampl. $U_{\text{i}}\mathbin{/}\unit{\volt}$ & Phasenverschiebung $\mathbin{/}$ rad\\
@@ -51,7 +51,7 @@ Wenn diese Messwerte doppel-logarithmisch aufgetragen werden, folgt der in \auto
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{build/Invertieren1.pdf}
-    \caption{Verstärkung $U_A/U_E$ des ersten Inverting Amplifiers in Abhängigkeit von der Frequenz.}
+    \caption{Verstärkung $U_A/U_E$ des ersten Invertierenden Linearverstärkers in Abhängigkeit von der Frequenz.}
     \label{fig:inv1plot}
 \end{figure}
 Deutlich zu sehen ist hier, dass bei kleinen Frequenzen (großer Wert des Logarithmus) nahezu keine Steigung existiert. Wenn  die Verhältnisse $U_0(f)/U_{\text{i}}$ über diese  Werte gemittelt werden, kann die Leerlaufverstärkung ermittelt werden.
@@ -79,15 +79,15 @@ Die Grenzfrequenz, welche als $f_{1\text{,g}}=\frac{g}{\sqrt{2}}$ definiert ist,
    \rightarrow f_{1\text{,g}}=&\exp{\left[\ln{\left(\frac{g}{\sqrt{2}}\right)-\frac{b}{m}}\right]}\\
 \end{align*}
 bestimmt werden.
-Für den ersten Inverting Amplifier ergibt sich so die Grenzfrequenz und daraus die 
+Für den ersten Invertierenden Linearverstärker ergibt sich so die Grenzfrequenz und daraus die 
 
 
-\subsubsection{Inverting Amplifier 2}
-\label{sec:InvertingAmplifier2}
+\subsubsection{Invertierender Linearverstärker 2}
+\label{sec:InvertierenderLinearverstärker2}
 
 \begin{table}
     \centering
-    \caption{Messwerte des Inverting Amplifiers mit $R_1=1\,\unit{\kilo\ohm}$ und $R_2=68\,\unit{\kilo\ohm}$}
+    \caption{Messwerte des Invertierenden Linearverstärkers mit $R_1=1\,\unit{\kilo\ohm}$ und $R_2=68\,\unit{\kilo\ohm}$}
     \begin{tabular}{c c c c}
         \toprule
         Frequenz $f\mathbin{/}\unit{\hertz}$ & Ausgangsampl. $U_0\mathbin{/}\unit{\volt}$& Eingangsampl. $U_{\text{i}}\mathbin{/}\unit{\volt}$ & Phasenverschiebung $\mathbin{/}$ rad\\
@@ -111,7 +111,7 @@ Für den ersten Inverting Amplifier ergibt sich so die Grenzfrequenz und daraus 
     \end{tabular}
     \label{tab:InvAmp2}
 \end{table}
-Die Auswertung und Bestimmung der wesentlichen Charakteristika der folgenden Inverting Amplifiers erfolgt in Gänze analog zu jenen in \autoref{sec:InvertingAmplifier1} durchgeführten Methoden.
+Die Auswertung und Bestimmung der wesentlichen Charakteristika der folgenden Invertierenden Linearverstärker erfolgt in Gänze analog zu jenen in \autoref{sec:InvertierenderLinearverstärker1} durchgeführten Methoden.
 Für die Leerlaufverstärkung folgt
 \begin{equation*}
     g_2= 61.4\; .
@@ -119,7 +119,7 @@ Für die Leerlaufverstärkung folgt
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{build/Invertieren2.pdf}
-    \caption{Verstärkung $U_A/U_E$ des zweiten Inverting Amplifiers in Abhängigkeit von der Frequenz.}
+    \caption{Verstärkung $U_A/U_E$ des zweiten Invertierenden Linearverstärkers in Abhängigkeit von der Frequenz.}
     \label{fig:inv2plot}
 \end{figure}
 Die Fit-Parameter der blauen Kurve aus \autoref{fig:inv2plot} ergeben sich zu
@@ -131,12 +131,12 @@ Hieraus folgt für die Grenzfrequenz
 \begin{equation*}
     f_{2\text{,g}}=
 \end{equation*}
-\subsubsection{Inverting Amplifier 3}
-\label{sec:InvertingAmplifier3}
+\subsubsection{Invertierender Linearverstärker 3}
+\label{sec:InvertierenderLinearverstärker3}
 
 \begin{table}
     \centering
-    \caption{Messwerte des Inverting Amplifiers mit $R_1=1\,\unit{\kilo\ohm}$ und $R_2=150\,\unit{\kilo\ohm}$}
+    \caption{Messwerte des Invertierenden Linearverstärkers mit $R_1=1\,\unit{\kilo\ohm}$ und $R_2=150\,\unit{\kilo\ohm}$}
     \begin{tabular}{c c c c}
         \toprule
         Frequenz $f\mathbin{/}\unit{\hertz}$ & Ausgangsampl. $U_0\mathbin{/}\unit{\volt}$& Eingangsampl. $U_{\text{i}}\mathbin{/}\unit{\volt}$ & Phasenverschiebung $\mathbin{/}$ rad\\
@@ -168,7 +168,7 @@ Die Leerlaufverstärkung beträgt
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{build/Invertieren3.pdf}
-    \caption{Verstärkung $U_A/U_E$ des dritten Inverting Amplifiers in Abhängigkeit von der Frequenz.}
+    \caption{Verstärkung $U_A/U_E$ des dritten invertierenden Linearverstärkers in Abhängigkeit von der Frequenz.}
     \label{fig:inv3plot}
 \end{figure}
 Die Fit-Parameter der blauen Kurve aus \autoref{fig:inv2plot} ergeben sich zu
