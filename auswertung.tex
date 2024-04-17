@@ -14,10 +14,14 @@ Die theoretischen Vergleichswerte für die Leerlaufverstärkung ergeben sich so 
     V_{\text{1,t}} &= \frac{150\,\unit{\kilo\ohm}}{1\,\unit{\kilo\ohm}} =150\\
 \end{align*}
 
-Für das Verhältnisse ergeben sich folgende experimentell bestimmte Werte.
+Für die Verhältnisse ergeben sich folgende experimentell bestimmte Werte.
+
+\subsubsection{Inverting Amplifier 1}
+\label{InvertingAmplifier1}
+
 \begin{table}
     \centering
-    \caption{Messwerte des Inverting Amplifiers mit $R1=1\,\unit{\kilo\ohm}$ und $R2=100\,\unit{\kilo\ohm}$}
+    \caption{Messwerte des Inverting Amplifiers mit $R_1=1\,\unit{\kilo\ohm}$ und $R_2=100\,\unit{\kilo\ohm}$}
     \begin{tabular}{c c c c}
         \toprule
         Frequenz $f\mathbin{/}\unit{\hertz}$ & Ausgangsampl. $U_0\mathbin{/}\unit{\volt}$& Eingangsampl. $U_{\text{i}}\mathbin{/}\unit{\volt}$ & Phasenverschiebung $\mathbin{/}$ rad\\
@@ -41,10 +45,22 @@ Für das Verhältnisse ergeben sich folgende experimentell bestimmte Werte.
     \end{tabular}
     \label{tab:InvAmp1}
 \end{table}
+Wenn diese Messwerte doppelt-logarithmisch aufgetragen werden, folgt der in \autoref{fig:graphInvertAmp1} dargestellte Verlauf des Verhältnisses $U_0/U_{\text{i}}$ in abhängigkeit der Frequenz $f$.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{build/Invertieren1.pdf}
+    \caption{Verstärkung $U_A/U_E$ des ersten Inverting Amplifiers in Abhängigkeit von der Frequenz.}
+    \label{fig:inv1plot}
+\end{figure}
+Deutlich zu sehen ist hier, dass bei kleinen Frequenzen nahezu keine Steigung existiert. Wenn  die Verhältnisse $U_0(f)/U_{\text{i}}$ über diese konstanten Werte gemittelt wird, kann die Leerlaufverstärkung ermittelt werden.
+
+\subsubsection{Inverting Amplifier 2}
+\label{InvertingAmplifier2}
 
 \begin{table}
     \centering
-    \caption{Messwerte des Inverting Amplifiers mit $R1=1\,\unit{\kilo\ohm}$ und $R2=68\,\unit{\kilo\ohm}$}
+    \caption{Messwerte des Inverting Amplifiers mit $R_1=1\,\unit{\kilo\ohm}$ und $R_2=68\,\unit{\kilo\ohm}$}
     \begin{tabular}{c c c c}
         \toprule
         Frequenz $f\mathbin{/}\unit{\hertz}$ & Ausgangsampl. $U_0\mathbin{/}\unit{\volt}$& Eingangsampl. $U_{\text{i}}\mathbin{/}\unit{\volt}$ & Phasenverschiebung $\mathbin{/}$ rad\\
@@ -69,10 +85,19 @@ Für das Verhältnisse ergeben sich folgende experimentell bestimmte Werte.
     \label{tab:InvAmp2}
 \end{table}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{build/Invertieren2.pdf}
+    \caption{Verstärkung $U_A/U_E$ des ersten Inverting Amplifiers in Abhängigkeit von der Frequenz.}
+    \label{fig:inv2plot}
+\end{figure}
+
+\subsubsection{Inverting Amplifier 3}
+\label{InvertingAmplifier3}
 
 \begin{table}
     \centering
-    \caption{Messwerte des Inverting Amplifiers mit $R1=1\,\unit{\kilo\ohm}$ und $R2=150\,\unit{\kilo\ohm}$}
+    \caption{Messwerte des Inverting Amplifiers mit $R_1=1\,\unit{\kilo\ohm}$ und $R_2=150\,\unit{\kilo\ohm}$}
     \begin{tabular}{c c c c}
         \toprule
         Frequenz $f\mathbin{/}\unit{\hertz}$ & Ausgangsampl. $U_0\mathbin{/}\unit{\volt}$& Eingangsampl. $U_{\text{i}}\mathbin{/}\unit{\volt}$ & Phasenverschiebung $\mathbin{/}$ rad\\
@@ -97,6 +122,12 @@ Für das Verhältnisse ergeben sich folgende experimentell bestimmte Werte.
     \label{tab:InvAmp3}
 \end{table}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{build/Invertieren3.pdf}
+    \caption{Verstärkung $U_A/U_E$ des dritten Inverting Amplifiers in Abhängigkeit von der Frequenz.}
+    \label{fig:inv3plot}
+\end{figure}
 \newpage
 
 \subsection{Integrator}
