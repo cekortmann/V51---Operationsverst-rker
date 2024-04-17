@@ -228,10 +228,14 @@ Wenn ein Schmitt-Trigger an einen Umkehrintegrator angeschlossen wird, wie in \a
 
 \noindent
 Die konstante Spannung, die vom Schmitt-Trigger ausgeht, wird integriert. Die Ausgangsspannung aus dem Umkehrintegrator wird als $U_1$ verwendet, sodass die Eingangsspannung des Schmitt-Triggers einen Schwellenwert erreicht. In den Integrator wird eine konstante Spannung mit entgegengesetztem Vorzeichen eingespeist. Insgesamt ergibt sich als Ausgangsspannung eine Dreiecksspannung mit 
-\begin{align*}
-    \text{Frequenz}\, : & & \text{und} & & \text{Amplitude}\, :& \\
-    \nu_\text{Dreieck} &= \frac{R_2}{4 C R_1 R_3} & & &A &=  U_\text{max} \frac{R_1}{R_2} \, .
-\end{align*}
+der Frequenz
+\begin{equation*}
+    \nu_\text{Dreieck} = \frac{R_2}{4 C R_1 R_3}
+\end{equation*}
+und der Amplitude 
+\begin{equation*}
+    A =  U_\text{max} \frac{R_1}{R_2}\;.
+\end{equation*}
 
 \subsubsection{Generator mit variierender Amplitude}
 Ein Generator mit variierender Amplitude besteht aus zwei Integratoren und einem Invertierer. Dadurch kann eine gedämpfte Oszillation hergestellt 
