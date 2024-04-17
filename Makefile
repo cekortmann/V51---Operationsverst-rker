@@ -1,6 +1,6 @@
 all: build/v51.pdf
 
-build/v51.pdf: build/invertertieren.pdf build/differentiator.pdf build/integrator.pdf v51.tex aufbau.tex auswertung.tex diskussion.tex durchfuehrung.tex fehlerrechnung.tex lit.bib theorie.tex ziel.tex | build
+build/v51.pdf: build/invertertieren.pdf build/genvar.pdf build/differentiator.pdf build/integrator.pdf v51.tex aufbau.tex auswertung.tex diskussion.tex durchfuehrung.tex fehlerrechnung.tex lit.bib theorie.tex ziel.tex | build
 	lualatex  --output-directory=build v51.tex
 	lualatex  --output-directory=build v51.tex
 	biber build/v51.bcf
@@ -15,6 +15,8 @@ build/integrator.pdf: integrator.py integrator.txt
 build/differentiator.pdf: differentiator.py differentiator.txt
 	python differentiator.py 
 
+build/genvar.pdf: genvar.py genvarAmp.txt
+	python genvar.py
 
 build: 
 	mkdir -p build
