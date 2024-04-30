@@ -25,13 +25,16 @@ t, U = np.genfromtxt('genvarAmp.txt', unpack=True, skip_header=1)
 
 def g(x,U0,T):
     return U0*np.exp(-x/T)  # b = 2*sigma**2
-
-para, pcov = curve_fit(g,t,U)
+#p0= (1.,1.,1./100,75.)
+para, pcov = curve_fit(g,t,U,[100,250])
 U0, T = para
 pcov = np.sqrt(np.diag(pcov))
 fU, fT = pcov
 uU = ufloat(U0, fU) 
 uT = ufloat(T, fT)
+
+print('uU', uU)
+print('uT', uT)
 
 xx = np.linspace(0, 800, 10**4)
 
@@ -41,6 +44,7 @@ plt.xlabel(r'$t \, / \, \mathrm{ns}$')
 plt.ylabel(r'$U_A \, / \, \mathrm{V}$')
 plt.legend(loc="best")                  # legend position
 plt.grid(True)                          # grid style
+#plt.ylim(0, 1.4)
 
 plt.savefig('build/genvar.pdf', bbox_inches = "tight")
 plt.clf() 

@@ -32,6 +32,10 @@ def log(u):
 def g(m,x,b):
     return m*x+b  # b = 2*sigma**2
 
+
+#def f(m,b):
+#    return np.exp(1/m*(log(92.9/np.sqrt(2))-b))
+
 para, pcov = curve_fit(g, log(f2),log (V2/U2))
 m, b = para
 pcov = np.sqrt(np.diag(pcov))
@@ -40,6 +44,8 @@ um = ufloat(m, fm)
 ub = ufloat(b, fb)
 
 print('um:',um,'ub:',ub)
+
+print('Grenzfrequenz1', np.exp(1/m*(log(92.9/np.sqrt(2))-b)))
 
 xx = np.linspace(8.5,12 , 10**4)
 
@@ -57,7 +63,7 @@ plt.clf()
 
 f3 ,V3 , U3, r3 ,g3 =np.genfromtxt('Invertieren2.txt',unpack= True, skip_header=1)
 
-f4 ,V4 , U4, r4 ,g4 =np.genfromtxt('Invertieren2.txt',unpack= True, skip_header=10, skip_footer=1)
+f4 ,V4 , U4, r4 ,g4 =np.genfromtxt('Invertieren2.txt',unpack= True, skip_header=11, skip_footer=1)
     
 # für den initial guess bei curvefit()
 n = len(r)                             # Anzahl der Daten
@@ -73,7 +79,7 @@ um = ufloat(m, fm)
 ub = ufloat(b, fb)
 
 print('um:',um,'ub:',ub)
-
+print('Grenzfrequenz2',np.exp(1/m*(log(61.4/np.sqrt(2))-b)))
 
 plt.plot(log(f3),log(V3/U3), 'xr', markersize=6 , label = 'Messdaten', alpha=0.5)
 plt.plot(xx, g(xx, *para), '-b', linewidth = 1, label = 'Ausgleichsfunktion', alpha=0.5)
@@ -88,7 +94,7 @@ plt.clf()
 
 f5 ,V5 , U5, r5 ,g5 =np.genfromtxt('Invertieren3.txt',unpack= True, skip_header=1)
 
-f6 ,V6 , U6, r6 ,g6=np.genfromtxt('Invertieren3.txt',unpack= True, skip_header=8, skip_footer=1)
+f6 ,V6 , U6, r6 ,g6=np.genfromtxt('Invertieren3.txt',unpack= True, skip_header=10, skip_footer=1)
     
 # für den initial guess bei curvefit()
 n3 = len(r5)                             # Anzahl der Daten
@@ -114,3 +120,6 @@ plt.grid(True)                          # grid style
 #plt.ylim(-0.05, 1.05)
 plt.savefig('build/Invertieren3.pdf', bbox_inches = "tight")
 plt.clf() 
+
+
+print('Grenzfrequenz3',np.exp(1/m*(log(84.4/np.sqrt(2))-b)))

@@ -52,7 +52,7 @@ Wenn diese Messwerte doppel-logarithmisch aufgetragen werden, folgt der in \auto
     \centering
     \includegraphics[width=0.8\textwidth]{build/Invertieren1.pdf}
     \caption{Verstärkung $U_A/U_E$ des ersten Invertierenden Linearverstärkers in Abhängigkeit von der Frequenz.}
-    \label{fig:inv1plot}
+    \label{fig:graphInvertAmp1}
 \end{figure}
 Deutlich zu sehen ist hier, dass bei kleinen Frequenzen (großer Wert des Logarithmus) die Werte nahezu konstant sind. Wenn  die Verhältnisse $U_0(f)/U_{\text{i}}$ über diese  Werte gemittelt werden, kann die Leerlaufverstärkung ermittelt werden.
 Für die Verstärkung folgt so 
@@ -73,12 +73,12 @@ lassen sich folgende Fit-Parameter bestimmen.
     m=&-0.77\pm 0.05 \\
     b=& 11.0\pm 0.5\\
 \end{align*}
-Die Grenzfrequenz, welche als $f_{1\text{,g}}=\frac{V_1}{\sqrt{2}}$ definiert ist, kann über
-\begin{align*}
-   ln{\left(\frac{V_1}{\sqrt{2}}\right)}=&m\cdot \ln{\left(f_{1\text{,g}}\right)}+b\\
-   \rightarrow f_{1\text{,g}}=&\exp{\left[\ln{\left(\frac{V_1}{\sqrt{2}}\right)-\frac{b}{m}}\right]}\\
-\end{align*}
-bestimmt werden.
+%%Die Grenzfrequenz, welche als $f_{1\text{,g}}=\frac{V_1}{\sqrt{2}}$ definiert ist, kann über
+%\begin{align*}
+%   ln{\left(\frac{V_1}{\sqrt{2}}\right)}=&m\cdot \ln{\left(f_{1\text{,g}}\right)}+b\\
+%   \rightarrow f_{1\text{,g}}=&\exp{\left[\ln{\left(\frac{V_1}{(\sqrt{2}}\right)-b)\frac{1}{m}}\right]}\\
+%\end{align*}
+%bestimmt werden.
 %Für den ersten Invertierenden Linearverstärker ergibt sich so die Grenzfrequenz und daraus die 
 
 
@@ -124,8 +124,8 @@ Für die Leerlaufverstärkung folgt
 \end{figure}
 Die Fit-Parameter der blauen Kurve aus \autoref{fig:inv2plot} ergeben sich zu
 \begin{align*}
-    m=&-0.80\pm 0.01 \\
-    b=& 4.18\pm 0.13\; .
+    m=&-0.80\pm 0.02 \\
+    b=& 11.05\pm 0.22\; .
 \end{align*}
 Hieraus folgt für die Grenzfrequenz
 \begin{equation*}
@@ -173,8 +173,8 @@ Die Leerlaufverstärkung beträgt
 \end{figure}
 Die Fit-Parameter der blauen Kurve aus \autoref{fig:inv2plot} ergeben sich zu
 \begin{align*}
-    m=&-0.72\pm 0.07 \\
-    b=& 9.9\pm 0.7\; .
+    m=&-0.91\pm 0.03 \\
+    b=& 11.90\pm 0.27\; .
 \end{align*}
 
 \newpage
