@@ -54,7 +54,7 @@ Wenn diese Messwerte doppel-logarithmisch aufgetragen werden, folgt der in \auto
     \caption{Verstärkung $U_A/U_E$ des ersten Invertierenden Linearverstärkers in Abhängigkeit von der Frequenz.}
     \label{fig:inv1plot}
 \end{figure}
-Deutlich zu sehen ist hier, dass bei kleinen Frequenzen (großer Wert des Logarithmus) nahezu keine Steigung existiert. Wenn  die Verhältnisse $U_0(f)/U_{\text{i}}$ über diese  Werte gemittelt werden, kann die Leerlaufverstärkung ermittelt werden.
+Deutlich zu sehen ist hier, dass bei kleinen Frequenzen (großer Wert des Logarithmus) die Werte nahezu konstant sind. Wenn  die Verhältnisse $U_0(f)/U_{\text{i}}$ über diese  Werte gemittelt werden, kann die Leerlaufverstärkung ermittelt werden.
 Für die Verstärkung folgt so 
 \begin{equation*}
     V_1=\frac{U_0}{U_{\text{i}}}= 92.9  \; .
@@ -282,7 +282,11 @@ Erneut wird \autoref{eqn:ausgleichger} mit \autoref{eqn:dif} verglichen. Dabei e
 Über die erste Methode wurde ein Schwellenwert von $U_+=3.213 \,\unit{\volt}$ gemessen. Beim Anlegen einer Dreieckspannung wurde als Schwellenwert 
 $U_+=2.994\,\unit{\volt}$ gemessen. Wenn aus diesen Werten der Mittelwert gebildet wird, ergibt sich $U_+=3.104\,\unit{\volt}$. Der Theoriewert 
 ergibt sich über \autoref{eqn:schwell}. Dabei ist $U_S$ die Ausgangsspannung am Schwellwert, d.h. die Ausgangsspannung springt abrupt auf 
-$U_S$
+$U_S$. In unserem Versuchsaufbau beträgt die Betriebsspannung $U_S = \pm 15 \,\unit{\volt}$. Daraus ergibt sich ein Schwellenwert von 
+\begin{equation*}
+    U_{\pm} = \frac{R_1}{R_p}U_S = \pm 1.5\,\unit{\volt} \,\, .
+\end{equation*}
+Der Betrag der gesamten Amplitude liegt somit bei $\lvert U_+ - U_- \rvert = 3\,\unit{\volt}$.
 
 \subsection{Signalgenerator}
 In \autoref{fig:genDrei} ist in gelb das sinusförmige Eingangssignal und in grün das dreieckförmige Ausgangssignal dargestellt. 

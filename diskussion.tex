@@ -10,17 +10,14 @@ Bei den ersten beiden liegen die Messwerte innerhalb der Messunsicherheit und /-
 Grund hierfür könnten neben den oben genannten Fehlern bei der Messung auch systematische Fehler sein, da viele verschiedene Geräte verwendet wurden dessen Intaktheit nicht garantiert ist und die Schaltungen teils sehr aufwändig 
 auf dem steckbrett platziert werden mussten.
 \\
-Beim Integrator und Differentiator weichen die aus den Messwerten berechneten Parameter deutlich von den Theoriewerten ab, sie liegen aber dennoch 
+Beim Integrator und Differentiator weichen die aus den Messwerten berechneten Parameter von den Theoriewerten ab, sie liegen aber dennoch 
 in der richtigen Größenordnung. Beim Integrator wird in \autoref{fig:intplot}, die zu erwartende mit der Frequenz abfallende Steigung deutlich. 
-Die zu Beginn konstante Verstärkung bis hin zu einer Grenzfrequenz wird hingegen weniger deutlich. Vermutlich konnte aus technischen Gründen nicht 
-bei einer Frequenz, die klein genug ist gestartet werden. Ein einziger Wert zu Beginn weicht von der linearen Verteilung ab und deutet somit ein 
-wenig auf die konstante Verstärkung hin. Beim Differentiator wird in \autoref{fig:diffplot} deutlich, dass die Verstärkung mit zunehmender Frequenz linear 
+Beim Differentiator wird in \autoref{fig:diffplot} deutlich, dass die Verstärkung mit zunehmender Frequenz linear 
 abnimmt. Dieses Verhalten bestätigt die theoretische Erwartung.
 \\
-Leider haben wir beim Schmitt-Trigger vergessen, die Ausgangsspannung $U_S$ zu notieren, sodass eine Berechnung der Theoriewerte und ein Vergleich mit 
-diesen nicht möglich ist. Zudem war bei beiden Methoden jeweils nur ein Schwellwert sichtbar, sodass ein mögliches Mitteln ausblieb. Dadurch wird 
-der Schwellwert ungenauer. Außerdem ergaben sich über die beiden Methoden unterschiedliche Schwellwerte, obwohl die Methode bei der Messung 
-keinen Unterschied machen dürfte.
+Es war bei beiden Methoden jeweils nur ein Schwellenwert sichtbar, sodass ein mögliches Mitteln ausblieb. Dadurch wird 
+der Schwellenwert ungenauer. Über die beiden Methoden ergaben sich leicht unterschiedliche Schwellwerte, welche dann gemittelt wurden. Der Theoriewert weicht von dem Mittelwert der gemessenen Schwellenwerte $U_+ = 3.104\,\unit{\volt}$ 
+lediglich um $3.4\%$ ab.
 \\
 Der Signalgenerator erzeugt eine Dreiecksspannung, wie in \autoref{fig:genDrei} zu sehen ist. Die Dreiecksspannung hatte in unserem Versuch, 
 keine perfekte Form eines Dreiecks. Dies lag a verschiedenen technischen Schwierigkeiten mit dem Oszilloskop. Außerdem zeigen die theoretischen Werte 

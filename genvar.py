@@ -23,8 +23,8 @@ t, U = np.genfromtxt('genvarAmp.txt', unpack=True, skip_header=1)
 
 # Ausgleichsrechung nach Gaußverteilung
 
-def g(U0,T, x):
-    return U0*np.exp(x*10**(-9)/T)  # b = 2*sigma**2
+def g(x,U0,T):
+    return U0*np.exp(-x/T)  # b = 2*sigma**2
 
 para, pcov = curve_fit(g,t,U)
 U0, T = para
@@ -36,7 +36,7 @@ uT = ufloat(T, fT)
 xx = np.linspace(0, 800, 10**4)
 
 plt.plot(t, U, 'xr', markersize=6 , label = 'Messdaten', alpha=0.5)
-#plt.plot(xx, f(xx, *para), '-b', linewidth = 1, label = 'Ausgleichsfunktion', alpha=0.5)
+plt.plot(xx, g(xx, *para), '-b', linewidth = 1, label = 'Ausgleichsfunktion', alpha=0.5)
 plt.xlabel(r'$t \, / \, \mathrm{ns}$')
 plt.ylabel(r'$U_A \, / \, \mathrm{V}$')
 plt.legend(loc="best")                  # legend position
