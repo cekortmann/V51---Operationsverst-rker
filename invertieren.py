@@ -44,9 +44,9 @@ um = ufloat(m, fm)
 ub = ufloat(b, fb)
 
 print('um:',um,'ub:',ub)
-
-print('Grenzfrequenz1', np.exp(1/m*(log(92.9/np.sqrt(2))-b)))
-
+Plateau1= log(19.5/0.21)
+print('Grenzfrequenz1', (Plateau1/np.sqrt(2)-ub)/um)
+#print(np.exp(logfg1))
 xx = np.linspace(8.5,12 , 10**4)
 
 plt.plot(log(f),log(V/U), 'xr', markersize=6 , label = 'Messdaten', alpha=0.5)
@@ -79,6 +79,9 @@ um = ufloat(m, fm)
 ub = ufloat(b, fb)
 
 print('um:',um,'ub:',ub)
+Plateau2= log(27/0.32)
+print(Plateau2)
+print('Grenzfrequenz2', (Plateau2/np.sqrt(2)-ub)/um)
 print('Grenzfrequenz2',np.exp(1/m*(log(61.4/np.sqrt(2))-b)))
 
 plt.plot(log(f3),log(V3/U3), 'xr', markersize=6 , label = 'Messdaten', alpha=0.5)
@@ -121,5 +124,9 @@ plt.grid(True)                          # grid style
 plt.savefig('build/Invertieren3.pdf', bbox_inches = "tight")
 plt.clf() 
 
-
+Plateau3= log(27/0.32)
+print('Grenzfrequenz3', (Plateau3/np.sqrt(2)-ub)/um)
 print('Grenzfrequenz3',np.exp(1/m*(log(84.4/np.sqrt(2))-b)))
+
+uf= ufloat(16317.6,157)
+print(84.4*uf)
