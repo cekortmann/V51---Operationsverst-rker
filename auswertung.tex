@@ -336,7 +336,7 @@ die gedämpfte Oszillation als Ausgangssignal.
     \caption{Verlauf der gedämpften Oszillation.}
     \label{fig:genvarosz}
 \end{figure}
-Nun konnten mithilfe des Oszilloskops die Messdaten extrahiert werden. Bei genauerer Analayse konnten so die Maxima der Ausgangsspannung 
+Nun konnten mithilfe des Oszilloskops die Messdaten extrahiert werden. Bei genauerer Analyse konnten so die Maxima der Ausgangsspannung 
 ausfindig gemacht werden. Diese sind in Abhängigkeit von der Zeit in \autoref{fig:genvarAmp} dargestellt.
 \begin{figure}
     \centering
@@ -344,3 +344,12 @@ ausfindig gemacht werden. Diese sind in Abhängigkeit von der Zeit in \autoref{f
     \caption{Verlauf der Amplituden der gedämpften Oszillation}
     \label{fig:genvarAmp}
 \end{figure}
+Für die gefundene Ausgleichsfunktion, welche der Form $f(x)= U_0\cdot exp(-\frac{t}{\tau})+a$ folgt, ergeben sich folgende Parameter
+\begin{align*}
+    U_0&= (1.540\pm 0.035) \, \unit{\volt}\;,\\
+    \tau&= (175\pm 9)\, \unit{\nano \second}\;,\\
+    a&= (0.405\pm 0.014) \, \unit{\volt}\; .
+\end{align*}
+Hierbei ist jedoch zu erwähnen, dass der Parameter $a$ nur nötig war, weil die gesamten Messwerte gegenüber der Theorie um $\Delta V= a$ nach oben verschoben sind.
+Um dies auszugleichen wurde der Funktion ein weiterer Parameter gegeben.
+Die zu ermittelnde Abklingzeit ist der oben ermittelte Parameter $\tau$ 
